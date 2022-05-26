@@ -22,8 +22,6 @@ const Banner = ({ netflixOriginals }: IMovie) => {
 
   const imageUrl = `${baseUrl}${movie?.backdrop_path || movie?.poster_path}`
 
-  console.log(imageUrl)
-
   return (
     <div className="flex flex-col space-y-2  md:h-[65vh] md:justify-end md:space-y-6 ">
       <div className="absolute top-0 left-0 -z-10 h-[95vh] w-full">
@@ -32,7 +30,6 @@ const Banner = ({ netflixOriginals }: IMovie) => {
           alt={movie?.title}
           layout="fill"
           objectFit="cover"
-          priority
         />
       </div>
       <h1 className="text-2xl pt-14 md:pt-0 md:text-4xl lg:text-6xl ">
