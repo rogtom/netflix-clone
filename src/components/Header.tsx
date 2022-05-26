@@ -8,7 +8,7 @@ import {
 } from '@heroicons/react/solid'
 import { Menu, Transition } from '@headlessui/react'
 import { signOut, useSession } from 'next-auth/react'
-import logo from '/public/netflix-logo.png'
+import logo from '../../public/netflix-logo.png'
 
 type Props = {}
 
