@@ -14,13 +14,10 @@ const Banner = ({ netflixOriginals }: IMovie) => {
   const [movie, setMovie] = useState<Movie | null>(null)
   const [isModalOpen, setIsModalOpen] = useRecoilState(modalState)
 
-  const randomMovie = () => {
-    const random = Math.floor(Math.random() * netflixOriginals.length)
-    setMovie(netflixOriginals[random])
-  }
-
   useEffect(() => {
-    randomMovie()
+    setMovie(
+      netflixOriginals[Math.floor(Math.random() * netflixOriginals.length)]
+    )
   }, [netflixOriginals])
 
   const imageUrl = `${baseUrl}${movie?.backdrop_path || movie?.poster_path}`
