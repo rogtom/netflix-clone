@@ -5,7 +5,6 @@ import { useRecoilState } from 'recoil'
 import { modalState } from '../../atoms/modalAtom'
 import { baseUrl } from '../../utils/consts'
 import { Movie } from '../../utils/types'
-import logo from '../../public/images/netflix-logo.png'
 
 interface IMovie {
   netflixOriginals: Movie[]
@@ -26,7 +25,14 @@ const Banner = ({ netflixOriginals }: IMovie) => {
   return (
     <div className="flex flex-col space-y-2  md:h-[65vh] md:justify-end md:space-y-6 ">
       <div className="absolute top-0 left-0 -z-10 h-[95vh] w-full">
-        <Image src={logo} alt={movie?.title} layout="fill" objectFit="cover" />
+        <div className="relative w-full h-full">
+          <Image
+            src={imageUrl}
+            alt={movie?.title}
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
       </div>
       <h1 className="text-2xl pt-14 md:pt-0 md:text-4xl lg:text-6xl ">
         {movie?.title || movie?.name || movie?.original_name}
