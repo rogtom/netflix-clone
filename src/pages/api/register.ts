@@ -1,16 +1,8 @@
 import bcrypt from 'bcrypt'
+import { NextApiRequest, NextApiResponse } from 'next'
 import Users from '../../../models/userModel'
 
-export default async function (
-  req: { body: any },
-  res: {
-    status: (arg0: number) => {
-      (): any
-      new (): any
-      json: { (arg0: { message: string }): void; new (): any }
-    }
-  }
-) {
+export default async function (req: NextApiRequest, res: NextApiResponse) {
   const body = req.body
   console.log(body)
 
