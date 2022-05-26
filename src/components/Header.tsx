@@ -56,7 +56,12 @@ const Header: React.FC = (props: Props) => {
   return (
     <header className={` ${isScroled && 'bg-[#141414]'}`}>
       <div className="flex items-center justify-between space-x-8">
-        <Image src="/netflix-logo.png" alt="Netflix" width={150} height={50} />
+        <Image
+          src="../../public/Netflix-logo.png"
+          alt="Netflix"
+          width={150}
+          height={50}
+        />
         <Menu as="div" className="relative text-left md:hidden ">
           <Menu.Button className="flex items-center">
             Brows
