@@ -8,6 +8,7 @@ import {
 } from '@heroicons/react/solid'
 import { Menu, Transition } from '@headlessui/react'
 import { signOut, useSession } from 'next-auth/react'
+import logo from '../../public/netflix-logo.png'
 
 type Props = {}
 
@@ -56,12 +57,7 @@ const Header: React.FC = (props: Props) => {
   return (
     <header className={` ${isScroled && 'bg-[#141414]'}`}>
       <div className="flex items-center justify-between space-x-8">
-        <Image
-          src="../../public/Netflix-logo.png"
-          alt="Netflix"
-          width={150}
-          height={50}
-        />
+        <Image src={logo} alt="Netflix" width={150} height={50} />
         <Menu as="div" className="relative text-left md:hidden ">
           <Menu.Button className="flex items-center">
             Brows
