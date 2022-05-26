@@ -55,7 +55,9 @@ const Header: React.FC = (props: Props) => {
   }
 
   return (
-    <header className={` ${isScroled && 'bg-[#141414]'}`}>
+    <header
+      className={` ${isScroled ? 'bg-[#141414]' : 'bg-header-gradient'} `}
+    >
       <div className="flex items-center justify-between space-x-8">
         <Image src={logo} alt="Netflix" width={150} height={50} />
         <Menu as="div" className="relative text-left md:hidden ">

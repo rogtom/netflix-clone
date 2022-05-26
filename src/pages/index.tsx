@@ -24,7 +24,7 @@ const Home: NextPage<IMovies> = ({
   const movie = useRecoilValue(movieState)
 
   return (
-    <div className="t0-[#010511] relative h-screen bg-gradient-to-b from-gray-900/10 to-[#010511] lg:h-[140vh]">
+    <div className="t0-[#010511] relative h-screen bg-gradient-to-ba  lg:h-[140vh]">
       <Head>
         <title>Home - Netflix</title>
         <link rel="icon" href="/netflix-icon.ico" />
